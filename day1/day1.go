@@ -35,6 +35,11 @@ func getInput(fname string) (numbers []int) {
 		numbers = append(numbers, num)
 	}
 
+	err = scanner.Err()
+	if err != nil {
+		log.Fatal(err)
+	}
+
 	return
 }
 
